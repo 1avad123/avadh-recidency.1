@@ -94,6 +94,39 @@
   </style>
 </head>
 <body>
+  <section class="section">
+  <h2>Project Video</h2>
+
+  <div style="position:relative; max-width:900px; margin:auto;">
+    
+    <!-- Thumbnail -->
+    <img id="thumbnail" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+    style="width:100%; border-radius:16px; filter:brightness(60%); cursor:pointer;"
+    onclick="playVideo()">
+
+    <!-- Play Button -->
+    <div onclick="playVideo()" 
+    style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); cursor:pointer;">
+      <div style="background:white; color:black; width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px;">
+        ▶
+      </div>
+    </div>
+
+    <!-- Video -->
+    <video id="myVideo" controls style="display:none; width:100%; border-radius:16px;">
+      <source src="project%20(1).mp4" type="video/mp4">
+    </video>
+
+  </div>
+</section>
+
+<script>
+function playVideo() {
+  document.getElementById('thumbnail').style.display = 'none';
+  document.getElementById('myVideo').style.display = 'block';
+  document.getElementById('myVideo').play();
+}
+</script>
 
 <header>Avadh Residency</header>
 
